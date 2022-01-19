@@ -8,10 +8,18 @@ public class TVUser {
 //	tv.volumeDown();
 //	tv.powerOff();
 		
-	TV tv = new LgTV();
+//	TV tv = new LgTV();
+//	tv.powerOn();
+//	tv.volumeUp();
+//	tv.volumeDown();
+//	tv.powerOff();	
+//	}
+		
+	BeanFactory factory = new BeanFactory();
+	TV tv = (TV)factory.getBean(args[0]);
 	tv.powerOn();
 	tv.volumeUp();
 	tv.volumeDown();
-	tv.powerOff();	
+	tv.powerOff();
 	}
 }
