@@ -23,18 +23,29 @@ public class SamsungTV implements TV{
 	public SamsungTV() {
 		System.out.println("SamsungTV 객체를 생성합니다.");
 	}
+	//생성자 추가 
+	public SamsungTV(SonySpeaker speaker) {
+		System.out.println("SamsungTV(2)객체생");
+		this.speaker = speaker;
+	}
 	public void powerOn() {
 		System.out.println("SamsungTV--전원 켠다. ");
 	}
 	public void powerOff() {
 		System.out.println("SamsungTV--전원 끈다. ");
 	}
+//	public void volumeUp() {
+//		speaker = new SonySpeaker();
+//		System.out.println("SamsungTV--소리 올린다. ");
+//	}
+//	public void volumeDown() {
+//		speaker = new SonySpeaker();
+//		System.out.println("SamsungTV--소리 내린다. ");
+//	}
 	public void volumeUp() {
-		speaker = new SonySpeaker();
-		System.out.println("SamsungTV--소리 올린다. ");
+		speaker.volumeUp();
 	}
 	public void volumeDown() {
-		speaker = new SonySpeaker();
-		System.out.println("SamsungTV--소리 내린다. ");
+		speaker.volumeDown();
 	}
 }
