@@ -18,6 +18,8 @@ package com.spring.biz;
 
 //다형성을 추가한 코드 
 public class SamsungTV implements TV{	
+	private SonySpeaker speaker;
+	
 	public SamsungTV() {
 		System.out.println("SamsungTV 객체를 생성합니다.");
 	}
@@ -28,9 +30,11 @@ public class SamsungTV implements TV{
 		System.out.println("SamsungTV--전원 끈다. ");
 	}
 	public void volumeUp() {
+		speaker = new SonySpeaker();
 		System.out.println("SamsungTV--소리 올린다. ");
 	}
 	public void volumeDown() {
+		speaker = new SonySpeaker();
 		System.out.println("SamsungTV--소리 내린다. ");
 	}
 }
