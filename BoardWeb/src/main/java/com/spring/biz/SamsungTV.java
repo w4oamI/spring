@@ -19,17 +19,24 @@ package com.spring.biz;
 //다형성을 추가한 코드 
 public class SamsungTV implements TV{	
 	private SonySpeaker speaker;
+	private int price;
 	
 	public SamsungTV() {
 		System.out.println("SamsungTV 객체를 생성합니다.");
 	}
 	//생성자 추가 
 	public SamsungTV(SonySpeaker speaker) {
-		System.out.println("SamsungTV(2)객체생");
+		System.out.println("SamsungTV(2)객체생성 ");
 		this.speaker = speaker;
+	}
+	public SamsungTV(SonySpeaker speaker, int price) {
+		System.out.println("SamsungTV(3)객체생성 ");
+		this.speaker = speaker;
+		this.price = price;
 	}
 	public void powerOn() {
 		System.out.println("SamsungTV--전원 켠다. ");
+		System.out.println("요즘이 추가 되었습니다. 총 가격:" + price);
 	}
 	public void powerOff() {
 		System.out.println("SamsungTV--전원 끈다. ");

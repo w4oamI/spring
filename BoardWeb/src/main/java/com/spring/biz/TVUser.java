@@ -40,6 +40,7 @@ public class TVUser {
 		tv.volumeUp();
 		tv.volumeDown();
 		tv.powerOff();
+		
 		factory.close();
 	}
 }
