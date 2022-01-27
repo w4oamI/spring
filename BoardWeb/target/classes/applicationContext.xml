@@ -10,6 +10,11 @@
 	</bean>-->
 	
 	<!--<bean id = "tv" class = "com.spring.biz.SamsungTV">
+	<constructor-arg ref = "apple"></constructor-arg>
+	<constructor-arg value = "3000"></constructor-arg>
+	</bean>-->
+	
+	<!--<bean id = "tv" class = "com.spring.biz.SamsungTV">
 	<property name = "speaker" ref = "apple"></property>
 	<property name = "price" value = "3000"></property>
 	</bean>
@@ -18,8 +23,18 @@
 	<bean id = "apple" class = "com.spring.biz.AppleSpeaker"></bean>
 	-->
 	
-	<bean id = "tv" class = "com.spring.biz.SamsungTV" p:speaker-ref = "sony" p:price="3000"/>
+	<!--<bean id = "tv" class = "com.spring.biz.SamsungTV" p:speaker-ref = "sony" p:price="3000"/>
 	
 	<bean id = "sony" class = "com.spring.biz.SonySpeaker"></bean>
-	<bean id = "apple" class = "com.spring.biz.AppleSpeaker"></bean>
+	<bean id = "apple" class = "com.spring.biz.AppleSpeaker"></bean>-->
+
+	<bean id = "collectionBean"
+			class = "com.spring.biz.CollectionBean">
+			<property name = "addressList">
+				<list>
+					<value>경기도 분당구 분당</value>
+					<value>경기도 수원시 장안</value>
+				</list>
+			</property>
+	</bean>
 </beans>
