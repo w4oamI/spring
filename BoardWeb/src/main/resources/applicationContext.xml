@@ -37,7 +37,7 @@
 				</list>
 			</property>
 	</bean>-->
-	<bean id = "collectionBean"
+	<!--<bean id = "collectionBean"
 			class = "com.spring.biz.CollectionBean">
 			<property name = "addressList">
 			<set value-type = "java.lang.String">
@@ -45,4 +45,21 @@
 			<value>경기도 수원시 장안구</value>
 			<value>창원시 성산구 </value>
 			</set>
+		</bean>-->
+		
+		<bean id = "collectionBean"
+			class = "com.spring.biz.CollectionBean">
+			<property name = "addressList">
+			<Map>
+				<entry>
+					<key><value>고길동</value></key>
+					<value>경기도 성남시 분당구</value>
+				</entry>
+				<entry>
+					<key><value>홍길동</value></key>
+					<value>경기도 수원시 장안구</value>
+				</entry>
+			</Map>
+			</property>
+			</bean>
 </beans>

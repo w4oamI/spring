@@ -1,10 +1,11 @@
 package com.spring.biz;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CollectionBean {
-	//List 타입맵
+	//List 타입 맵핑 
 //	private List<String> addressList;
 //	
 //	public void setAddressList(List<String> addressList) {
@@ -14,9 +15,17 @@ public class CollectionBean {
 //		return addressList;
 //	}
 	
-	private Set<String> addressList;
+	//Set 타입 맵핑 
+//	private Set<String> addressList;
+//	
+//	public void setAddressList(Set<String> addressList) {
+//		this.addressList = addressList;
+//	}
 	
-	public void setAddressList(Set<String> addressList) {
+	//Map 타입 맵핑 
+	private Map<String, String> addressList;
+	
+	public void setAddressList(Map<String,String> addressList) {
 		this.addressList = addressList;
 	}
 }
