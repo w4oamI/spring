@@ -24,16 +24,16 @@ public class SamsungTV implements TV{
 	public SamsungTV() {
 		System.out.println("SamsungTV 객체를 생성합니다.");
 	}
-//	//생성자 추가 
-//	public SamsungTV(Speaker speaker) {
-//		System.out.println("SamsungTV(2)객체생성 ");
-//		this.speaker = speaker;
-//	}
-//	public SamsungTV(Speaker speaker, int price) {
-//		System.out.println("SamsungTV(3)객체생성 ");
-//		this.speaker = speaker;
-//		this.price = price;
-//	}
+	//생성자 추가 
+	public SamsungTV(Speaker speaker) {
+		System.out.println("SamsungTV(2)객체생성 ");
+		this.speaker = speaker;
+	}
+	public SamsungTV(Speaker speaker, int price) {
+		System.out.println("SamsungTV(3)객체생성 ");
+		this.speaker = speaker;
+		this.price = price;
+	}
 	public void setSpeaker(Speaker speaker) {
 		System.out.println("setSpeaker 호출");
 		this.speaker=speaker;
