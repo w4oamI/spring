@@ -47,7 +47,8 @@
 			</set>
 		</bean>-->
 		
-		<bean id = "collectionBean"
+		
+		<!--  <bean id = "collectionBean"
 			class = "com.spring.biz.CollectionBean">
 			<property name = "addressList">
 			<Map>
@@ -61,5 +62,12 @@
 				</entry>
 			</Map>
 			</property>
-			</bean>
+			</bean>-->
+			
+			<property name = "addressList">
+				<props>
+					<prop key = "고길동">성남시 분당구</prop>
+					<prop key = "홍길동">수원시 장안구</prop>
+				</props>
+			</property>
 </beans>

@@ -2,6 +2,7 @@ package com.spring.biz;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class CollectionBean {
@@ -23,9 +24,13 @@ public class CollectionBean {
 //	}
 	
 	//Map 타입 맵핑 
-	private Map<String, String> addressList;
+//	private Map<String, String> addressList;
+//	public void setAddressList(Map<String,String> addressList) {
+//	this.addressList = addressList;
+//	}
 	
-	public void setAddressList(Map<String,String> addressList) {
-		this.addressList = addressList;
+	//properties 타입 맵핑
+	public void setAddressList(Properties addressList) {
+		this.setaddressList = addressList;
 	}
 }
