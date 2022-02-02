@@ -15,5 +15,6 @@ public class CollectionBeanUser {
 			System.out.println(address.toString());
 		}
 		factory.close();
+		
 	}
 }
