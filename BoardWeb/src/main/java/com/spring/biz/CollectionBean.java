@@ -6,22 +6,22 @@ import java.util.Properties;
 import java.util.Set;
 
 public class CollectionBean {
-	//List 타입 맵핑 
-//	private List<String> addressList;
-//	
-//	public void setAddressList(List<String> addressList) {
-//		this.addressList = addressList;
-//	}
-//	public List<String> getAddressList(){
-//		return addressList;
-//	}
+//	List 타입 맵핑 
+	private List<String> addressList;
+	
+	public void setAddressList(List<String> addressList) {
+		this.addressList = addressList;
+	}
+	public List<String> getAddressList(){
+		return addressList;
+	}
 	
 	//Set 타입 맵핑 
-//	private Set<String> addressList;
-//	
-//	public void setAddressList(Set<String> addressList) {
-//		this.addressList = addressList;
-//	}
+	private Set<String> addressList;
+	
+	public void setAddressList(Set<String> addressList) {
+		this.addressList = addressList;
+	}
 	
 	//Map 타입 맵핑 
 //	private Map<String, String> addressList;

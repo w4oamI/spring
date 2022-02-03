@@ -37,6 +37,7 @@
 				</list>
 			</property>
 	</bean>-->
+	
 	<!--<bean id = "collectionBean"
 			class = "com.spring.biz.CollectionBean">
 			<property name = "addressList">
