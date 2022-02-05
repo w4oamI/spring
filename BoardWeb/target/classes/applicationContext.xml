@@ -2,8 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+	<context:component-scan base-package="polymorphism"></context:component-scan>
 	<!--<bean id = "tv" class = "com.spring.biz.SamsungTV">
 	<constructor-arg ref = "apple"></constructor-arg>
 	<constructor-arg value = "3000"></constructor-arg>
@@ -64,11 +68,12 @@
 			</Map>
 			</property>
 			</bean>-->
-			
+			<!-- 
 			<property name = "addressList">
 				<props>
 					<prop key = "고길동">성남시 분당구</prop>
 					<prop key = "홍길동">수원시 장안구</prop>
 				</props>
 			</property>
+			-->
 </beans>
