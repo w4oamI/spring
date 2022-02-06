@@ -24,10 +24,10 @@ public class CollectionBean {
 	}
 	
 	//Map 타입 맵핑 
-//	private Map<String, String> addressList;
-//	public void setAddressList(Map<String,String> addressList) {
-//	this.addressList = addressList;
-//	}
+	private Map<String, String> addressList;
+	public void setAddressList(Map<String,String> addressList) {
+	this.addressList = addressList;
+	}
 	
 	//properties 타입 맵핑
 	public void setAddressList(Properties addressList) {
