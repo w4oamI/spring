@@ -1,5 +1,9 @@
 package com.spring.biz;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 //뼈대 코드 
 //public class SamsungTV {
 //	public void powerOn() {
@@ -16,8 +20,11 @@ package com.spring.biz;
 //	}
 //}
 
-//다형성을 추가한 코드 
+//다형성을 추가한 코드
+@Component("tv")
 public class SamsungTV implements TV{	
+	@Autowired
+	@Qualifier("apple")
 	private Speaker speaker;
 	private int price;
 	
