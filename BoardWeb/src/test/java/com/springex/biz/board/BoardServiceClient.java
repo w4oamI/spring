@@ -1,5 +1,7 @@
 package com.springex.biz.board;
 
+import java.util.List;
+
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -16,6 +18,10 @@ public class BoardServiceClient {
 	vo.setContent("둘리둘리~~오오~");
 	boardService.insertBoard(vo);
 	
+	List<BoardVO> boardList = boardService.getBoardList(vo);
+	for(BoardVO board : boardList) {
+		System.out.println(board.toString());
+	}
 	container.close();
 	}
 }
