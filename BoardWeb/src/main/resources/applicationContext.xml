@@ -9,6 +9,10 @@
 
 	<context:component-scan base-package="com.springex.biz"></context:component-scan>
 	
+	<bean id="userService" class = "com.springex.biz.user.impl.UserServiceImpl">
+		<property name = "userDAO" ref = "userDAO"/>
+	</bean>
+	<bean id = "userDAO" class = "com.springex.biz.user.impl.UserDAO"/>
 	<!--<bean id = "tv" class = "com.spring.biz.SamsungTV">
 	<constructor-arg ref = "apple"></constructor-arg>
 	<constructor-arg value = "3000"></constructor-arg>
