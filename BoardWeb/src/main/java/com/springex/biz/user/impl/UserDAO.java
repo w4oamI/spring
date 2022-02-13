@@ -2,9 +2,12 @@ package com.springex.biz.user.impl;
 
 import java.sql.*;
 
+import org.springframework.stereotype.Repository;
+
 import com.springex.biz.common.JDBCUtil;
 import com.springex.biz.user.UserVO;
 
+@Repository("userDAO")
 public class UserDAO {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
