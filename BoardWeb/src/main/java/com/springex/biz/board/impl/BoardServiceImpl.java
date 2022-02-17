@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.springex.biz.board.BoardService;
 import com.springex.biz.board.BoardVO;
-import com.springex.biz.common.Log4jAdvice;
-import com.springex.biz.common.LogAdvice;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService{
@@ -22,12 +20,14 @@ public class BoardServiceImpl implements BoardService{
 		boardDAO.deleteBoard(vo);
 	}
 	
-	public void getBoard(BoardVO vo) {
-		boardDAO.getBoard(vo);
-	}
 	public void updateBoard(BoardVO vo) {
 		boardDAO.updateBoard(vo);
 	}
+	
+	public BoardVO getBoard(BoardVO vo) {
+		return boardDAO.getBoard(vo);
+	}
+	
 	public List<BoardVO> getBoardList(BoardVO vo){
 		return boardDAO.getBoardList(vo);
 	}
