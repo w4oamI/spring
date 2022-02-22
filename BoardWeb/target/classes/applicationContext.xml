@@ -23,6 +23,28 @@
 		</aop:aspect>
 	</aop:config>
 	
+	
+	
+	<bean id = "txManager" class = "org.springframework.orm.jpa.JpaTransactionManager">
+		<property name = "entityManagerFactory" ref = "entityManagerFactory"></property>
+	</bean>
+	
+	<tx:advice id = "txAdvice" transaction-manager = "txManager">
+		<tx:attribute>
+			<tx:method name = "get*" read-only = "true"/>
+			<tx:method name = "*"/>
+		</tx:attribute>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut id = "allPointcut" expression = "execution(* com.springbook.biz..*Impl.*(..))"/>
+		
+		<aop:advisor pointcut-ref = "allPointcut" advice-ref = "txAdvice"/>
+	</aop:config>
+	
+	
+	
+	
 	<bean id="userService" class = "com.springex.biz.user.impl.UserServiceImpl">
 		<property name = "userDAO" ref = "userDAO"/>
 	</bean>
