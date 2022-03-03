@@ -17,7 +17,9 @@
 		<aop:pointcut id = "getPointcut" expression = "execution(* com.springex.biz..*Impl.get*(..))"/>
 		
 		<aop:aspect ref = "log">
-			<aop:after pointcut-ref = "allPointcut" method = "printLog"/>
+			<!-- <aop:befor pointcut-ref = "allPointcut" method = "printLog"/>  -->
+			<!-- <aop:befor pointcut-ref = "getPointcut" method = "printLog"/>  -->
+			<aop:after pointcut-ref = "getPointcut" method = "printLog"/>
 		</aop:aspect>
 	</aop:config>
 </beans>
