@@ -10,16 +10,25 @@
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
 
-	<context:component-scan base-package="com.springex.biz"></context:component-scan>
+	<!--  <context:component-scan base-package="com.springex.biz"></context:component-scan>
 		<bean id = "log" class = "com.springex.biz.common.LogAdvice"></bean>
 	<aop:config>
 		<aop:pointcut id = "allPointcut" expression = "execution(* com.springex.biz..*Impl.*(..))"/>
 		<aop:pointcut id = "getPointcut" expression = "execution(* com.springex.biz..*Impl.get*(..))"/>
 		
 		<aop:aspect ref = "log">
-			<!-- <aop:befor pointcut-ref = "allPointcut" method = "printLog"/>  -->
-			<!-- <aop:befor pointcut-ref = "getPointcut" method = "printLog"/>  -->
+			 <aop:befor pointcut-ref = "allPointcut" method = "printLog"/>  
+			 <aop:befor pointcut-ref = "getPointcut" method = "printLog"/>  
 			<aop:after pointcut-ref = "getPointcut" method = "printLog"/>
+		</aop:aspect>
+	</aop:config>-->
+	<context:component-scan base-package="com.springex.biz"></context:component-scan>
+		<bean id = "before" class = "com.springex.biz.common.LogAdvice"></bean>
+	<aop:config>
+		<aop:pointcut id = "allPointcut" expression = "execution(* com.springex.biz..*Impl.*(..))"/>
+		
+		<aop:aspect ref = "before">
+			 <aop:befor pointcut-ref = "allPointcut" method = "beforeLog"/>  
 		</aop:aspect>
 	</aop:config>
 </beans>
