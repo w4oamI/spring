@@ -43,13 +43,28 @@
 		</aop:aspect>
 	</aop:config>-->
 	
-	<context:component-scan base-package="com.springex.biz"></context:component-scan>
+	
+	<!-- <context:component-scan base-package="com.springex.biz"></context:component-scan>
 		<bean id = "afterThrowing" class = "com.springex.biz.common.LogAdvice"></bean>
 	<aop:config>
 		<aop:pointcut id = "allPointcut" expression = "execution(* com.springex.biz..*Impl.*(..))"/>
 		
 		<aop:aspect ref = "afterThrowing">
 			 <aop:befor pointcut-ref = "allPointcut" method = "exceptionLog"/>  
+		</aop:aspect>
+	</aop:config>  -->
+	
+	<context:component-scan base-package="com.springex.biz"></context:component-scan>
+		<bean id = "afterThrowing" class = "com.springex.biz.common.LogAdvice"></bean>
+		<bean id = "after" class = "com.springex.biz.common.AfterAdvice">
+	<aop:config>
+		<aop:pointcut id = "allPointcut" expression = "execution(* com.springex.biz..*Impl.*(..))"/>
+		
+		<aop:aspect ref = "afterThrowing">
+			 <aop:befor pointcut-ref = "allPointcut" method = "exceptionLog"/>  
+		</aop:aspect>
+		<aop:aspect ref= "after">
+			<aop:after pointcut-ref = "allPointcut" method="finallyLog"/>
 		</aop:aspect>
 	</aop:config>
 </beans>

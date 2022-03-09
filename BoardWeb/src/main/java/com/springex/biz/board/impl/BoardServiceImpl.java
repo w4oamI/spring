@@ -20,6 +20,9 @@ public class BoardServiceImpl implements BoardService{
 	}
 	public void insertBoard(BoardVO vo) {
 		log.printLog();
+		if(vo.getSeq()==0) {
+			throw new IllegalArgumentException("예외처리");
+		}
 		boardDAO.insertBoard(vo);
 	}
 	public void deleteBoard(BoardVO vo) {
